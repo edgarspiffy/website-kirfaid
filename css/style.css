@@ -141,11 +141,14 @@ hr {
     background-color: var(--text-color-primary);
     padding: 20px;
     height: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .submission-form .flex-items .item .content h4 {
     font-size: 40px;
     color: #fff;
+    font-weight: 300;
 }
 
 .submission-form .flex-items .item .content p {
@@ -153,13 +156,69 @@ hr {
     font-size: 20px;
 }
 
-.submission-form .flex-items .item .content input {
+.submission-form .flex-items .item .content form {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+}
+
+.submission-form .flex-items .item .content form input::placeholder {
+    color: #202020;
+    opacity: .40;
+    font-size: 15px;
+}
+
+.submission-form .flex-items .item .content .grid-container {
+    display: grid;
+    grid-template-areas: "input1 input2 input3" "input4 input4 input4" "input5 input5 input5";
+    grid-gap: .5rem;
+}
+
+.submission-form .flex-items .item .content .grid-container .input1 {
+    grid-area: input1;
+}
+
+.submission-form .flex-items .item .content .grid-container .input2 {
+    grid-area: input2;
+}
+
+.submission-form .flex-items .item .content .grid-container .input3 {
+    grid-area: input3;
+}
+
+.submission-form .flex-items .item .content .grid-container .input4 {
+    grid-area: input4;
+}
+
+.submission-form .flex-items .item .content .grid-container .input5 {
+    grid-area: input5;
+}
+
+.submission-form .flex-items .item .content form .btn-primary {
+    background: var(--accent-color);
+    font-family: var(--text-font-color);
+    font-family: var(--button-nav-font);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 3px;
+    display: inline-block;
+    transition-duration: .2s;
+    display: block !important;
+    width: 100%;
+}
+
+.submission-form .flex-items .item .content input, .submission-form .flex-items .item .content select {
     height: 45px;
     padding: 6px 16px;
-    ;
     display: inline-block;
     border: none;
-    background-color: #ebebebeb;
+    /* background-color: #ebebebeb; */
 }
 
 .submission-form .flex-items .item .content input::placeholder {
